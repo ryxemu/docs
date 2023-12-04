@@ -3,6 +3,7 @@
 * Always have sane default values
 * Use snake_case field names
 * Plural table names, singular field names
+* Table names scope large_to_small
 
 ## aa_actions
 
@@ -41,6 +42,7 @@ base2|content|base2|
 
 primary: id
 unique: name, ls_account_id
+
 old_field|context|new_field|notes
 ---|---|---|---
 id|data|id|
