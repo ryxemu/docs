@@ -12,17 +12,17 @@ primary: aa_id, rank
 old_field|context|new_field|notes
 ---|---|---|---
 aaid|content|aa_id|
-rank|content|rank|
-reuse_time|content|reuse_time|
-spell_id|content|spell_id|
-target|content|target|
-nonspell_action|content|nonspell_action|
-nonspell_mana|content|nonspell_mana|
-nonspell_duration|content|nonspell_duration|
-redux_aa|content|redux_aa|
-redux_rate|content|redux_rate|
-redux_aa2|content|redux_aa2|
-redux_rate2|content|redux_rate2|
+rank|content||
+reuse_time|content||
+spell_id|content||
+target|content||
+nonspell_action|content||
+nonspell_mana|content||
+nonspell_duration|content||
+redux_aa|content||
+redux_rate|content||
+redux_aa2|content||
+redux_rate2|content||
 
 ## aa_effect
 
@@ -31,12 +31,12 @@ unique: (aa_id, slot)
 
 old_field|context|new_field|notes
 ---|---|---|---
-id|content|id|
+id|content||
 aaid|content|aa_id|
-slot|content|slot|
+slot|content||
 effectid|content|effect_id|
-base1|content|base1|
-base2|content|base2|
+base1|content||
+base2|content||
 
 ## account
 
@@ -45,31 +45,31 @@ unique: name, ls_account_id
 
 old_field|context|new_field|notes
 ---|---|---|---
-id|data|id|
-name|data|name|
+id|data||
+name|data||
 charname|data|char_name|
 sharedplat|data|shared_plat|
-password|data|password|
-status|data|status|
+password|data||
+status|data||
 lsaccount_id|data|ls_account_id|
 forum_id|data|forum_id|
-gmspeed|data|gmspeed|
-revoked|data|revoked|
-karma|data|karma|
-minilogin_ip|data|minilogin_ip|
-hideme|data|hideme|
-rulesflag|data|rulesflag|
-suspendeduntil|data|suspendeduntil|
-time_creation|data|time_creation|
-expansion|data|expansion|
-ban_reason|data|ban_reason|
-suspend_reason|data|suspend_reason|
-active|data|active|
-ip_exemption_multiplier|data|ip_exemption_multiplier|
-gminvul|data|gminvul|
-flymode|data|flymode|
-ignore_tells|data|ignore_tells|
-mule|data|mule|
+gmspeed|data||
+revoked|data||
+karma|data||
+minilogin_ip|data||
+hideme|data||
+rulesflag|data||
+suspendeduntil|data||
+time_creation|data||
+expansion|data||
+ban_reason|data||
+suspend_reason|data||
+active|data||
+ip_exemption_multiplier|data||
+gminvul|data||
+flymode|data||
+ignore_tells|data||
+mule|data||
 
 ## account_flag
 
@@ -82,10 +82,78 @@ flag|data|flag|
 value|data|value|
 
 ## account_ip
+
+primary: account_id, ip
+
+old_field|context|new_field|notes
+---|---|---|---
+accid|data|account_id
+ip|data|ip
+count|data|count
+lastused|data|lastused
+
 ## account_rewards > account_reward
+
+unique: account_id, reward_id
+key: account_id
+
+old_field|context|new_field|notes
+---|---|---|---
+account_id|data||
+reward_id|data||
+amount|data||
+
 ## altadv_vars > aa_var
+
+primary: skill_id
+
+old_field|context|new_field|notes
+---|---|---|---
+skill_id|data||
+name|data||
+cost|data||
+max_level|data||
+type|data||
+spellid|data||
+prereq_skill|data||
+prereq_minpoints|data||
+spell_type|data||
+spell_refresh|data||
+classes|data||
+class_type|data||
+cost_inc|data||
+aa_expansion|data||
+special_category|data||
+account_time_required|data||
+level_inc|data||
+eqmacid|data||
+
 ## banned_ips > banned_ip
+
+primary: ip_address
+
+old_field|context|new_field|notes
+---|---|---|---
+ip_address|data||
+notes|data||
+
 ## base_data
+
+primary: level, class
+
+old_field|context|new_field|notes
+---|---|---|---
+level|content||
+class|content||
+hp|content||
+mana|content||
+end|content||
+unk1|content||
+unk2|content||
+hp_fac|content||
+mana_fac|content||
+end_fac|content||
+
 ## blocked_spells > blocked_spell
 ## books > book
 ## bugs > bug
